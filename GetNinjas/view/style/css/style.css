@@ -1,0 +1,337 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: "Avenir Next Pro","Helvetica Neue", Arial, sans-serif;
+}
+
+main, div{
+  display:block;
+}
+
+
+.box_botoes{
+  padding-top: 30px;
+}
+
+/*background da página*/
+.background{
+  color: #000;
+  overflow: hidden;
+  background:url("../../img/bg.jpeg") no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.cover_dark {
+    position:relative;
+    background: rgba(0,0,0, 0.75);
+    min-height: 100%;
+    weight: 100%;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+/*estilo para título e subtítulo da página*/
+#title_service h1{
+  margin:auto;
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+#title_service h2{
+  margin:auto;
+  text-align: center;
+  color: #96968d;
+  padding-top: 30px;
+}
+
+
+/*Para telas grandes*/
+@media screen and (min-width: 600px) {
+  #title_service h1{
+    font-size:3vw;
+  }
+
+  #title_service h2{
+    font-size:1.5vw;
+  }
+
+  /*altera tamanho das boxForm*/
+  .box_form_size{
+    position: absolute;
+    width:400px;
+    min-height: 200px;
+
+    padding:30px;
+
+    left:50%;
+    margin-left:-230px;
+    top:50%;
+    margin-top: -100px;
+  }
+}
+
+/*Para telas médias*/
+@media screen and (min-width: 350px) and (max-width : 600px){
+  #title_service h1{
+    font-size:10vw;
+  }
+
+  #title_service h2{
+    font-size:3vw;
+  }
+
+  .box_form_size{
+    position: absolute;
+    width: 300px;
+    min-height: 200px;
+
+    padding:30px;
+
+    left:50%;
+    margin-left:-180px;
+    top:50%;
+    margin-top: -100px;
+  }
+}
+
+/*Para telas pequenas*/
+@media screen and (max-width : 350px){
+  #title_service h1{
+    font-size:8vw;
+  }
+
+  #title_service h2{
+    font-size:4vw;
+  }
+
+  .box_form_size{
+    position: absolute;
+    width: 200px;
+    min-height: 300px;
+
+    padding:30px;
+
+    position:absolute;
+    left:50%;
+    margin-left:-130px;
+    top:50%;
+    margin-top:-120px;
+  }
+}
+
+/*Estilo das boxForm com efeito quando troca de boxForm*/
+.box_form{
+    background: #EEE;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    visibility:hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+/*Estilo do título do card das boxForm*/
+.title_form{
+    background: #7A1111;
+    padding: 20px 30px 15px 30px;
+    margin: -30px -30px 30px -30px;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #7A1111;
+    text-align: center;
+}
+
+/*estilo para mensagem de erro (required)*/
+.message_error{
+  font-weight: bold;
+  font-size: 0.8em;
+  color:#7A1111;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/****************ELEMENTOS DO FORM*************/
+
+/*estilo dos botões*/
+button{
+  position:absolute;
+  bottom:20px;
+  margin-left:-50px;
+  left:50%;
+  border:none;
+  padding:10px 20px 10px 20px;
+  background:#7A1111;
+  color: #FFF;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+button:active {
+  background: #370808;
+}
+
+button:hover {
+cursor: pointer;
+background-color: #A71717;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*estilo dos inputs, textarea e select*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select
+{
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #843d49;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  color: #370808;
+  font-weight: bold;
+}
+
+select > option: first{
+  color: #6b6b6b;
+}
+
+select> option{
+  width: 100%;
+  padding: 10px;
+  z-index: 2;
+  outline: 0px none;
+}
+
+select> option:hover, option:checked{
+  box-shadow: 0 0 10px 100px #843d49 inset;
+  background-color: #843d49;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus
+{
+  border-bottom-color: #7A1111;
+}
+
+
+/*estilo dos checkbox*/
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  -ms-appearance:none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 6px;
+	border-radius: 2px;
+  -webkit-border-radius:2px;
+  -moz-border-radius: 2px;
+	display: inline-block;
+	position: relative;
+  outline: none;
+}
+
+input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"]:checked {
+	background-color: #843d49;
+	border: 1px solid #370808;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #843d49;
+}
+
+input[type="checkbox"]:checked:after {
+	content: '\2714';
+	font-size: 10px;
+  font-weight: bold;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #370808;
+}
+label{
+  color: #370808;
+  font-weight:bold;
+}
+
+/*estilo para os placeholders*/
+::-webkit-input-placeholder{
+  color: #6b6b6b;
+  transition: opacity 250ms ease-in-out;
+}
+:-moz-placeholder{
+  color: #6b6b6b;
+  transition: opacity 250ms ease-in-out;
+}
+::-moz-placeholder{
+  color: #6b6b6b;
+  transition: opacity 250ms ease-in-out;
+}
+:-ms-input-placeholder{
+  color: #6b6b6b;
+  transition: opacity 250ms ease-in-out;
+}
+
+
+
+/*animação dos campos required*/
+@-webkit-keyframes erro-animacao {
+    0%, 100% {-webkit-transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+}
+@keyframes erro-animacao {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+.erro-animacao {
+    -webkit-animation-name: erro-animacao;
+    animation-name: erro-animacao;
+}
+.animacao{
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
