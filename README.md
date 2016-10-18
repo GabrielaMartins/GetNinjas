@@ -1,6 +1,6 @@
 #GetNinjas!
 ----------
-Formulário para o serviço de Cabeleireiro
+Formulário para o serviço de Cabeleireiro todo em Vanilla.js, sem framework algum, nem JQuery!
 
 ## Rodando... ##
 
